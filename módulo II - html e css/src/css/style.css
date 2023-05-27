@@ -1,0 +1,38 @@
+body {
+    background-color: #e7e7e7;
+
+}
+
+#title, .subtitle, .footer {
+    margin-left: 10px;
+}
+
+#title, .subtitle, .post_title {
+    color: #505050;
+}
+
+.post_title {
+    font-size: 16px;
+    font-style: italic;
+    margin-bottom: 15px;
+}
+
+.post {
+    background-color: #fff;
+    padding: 10px;
+    border: 2px solid #505050;
+    margin: 10px;
+}
+
+
+
+.footer {
+    margin-top: 25px;
+}
+
+.footer ul {
+    display: flex;
+    gap: 30px;
+    justify-content: center;
+}
+
