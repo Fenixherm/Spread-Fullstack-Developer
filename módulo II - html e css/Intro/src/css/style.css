@@ -1,6 +1,7 @@
 body {
     background-color: #e7e7e7;
-
+    max-width: 900px;
+    margin: auto;
 }
 
 #title, .subtitle, .footer {
@@ -9,6 +10,10 @@ body {
 
 #title, .subtitle, .post_title {
     color: #505050;
+}
+
+#title {
+    text-align: center;
 }
 
 .post_title {
@@ -24,7 +29,15 @@ body {
     margin: 10px;
 }
 
+.post p {
+    font-family: Verdana, Tahoma, sans-serif;
+    font-style: italic;
+    text-decoration: overline;
+}
 
+.post .imagem {
+    width: 100%;
+}
 
 .footer {
     margin-top: 25px;
@@ -34,5 +47,6 @@ body {
     display: flex;
     gap: 30px;
     justify-content: center;
+    list-style: square;
 }
 
