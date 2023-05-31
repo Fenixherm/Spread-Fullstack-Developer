@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Flex Basis</title>
+    <style>
+        .container {
+            max-width: 500px;
+            border: 1px solid black;
+            display: flex;
+        }
+
+        .item {
+            background-color: orangered;
+            color: bisque;
+            text-align: center;
+            margin: 5px;
+        }
+
+        .w80 {
+            flex-basis: 80px;
+        }
+
+        .flex-g-1 {
+            flex-grow: 1;
+        }
+
+        .flex-g-2 {
+            flex-grow: 2;
+        }
+
+        .basis-auto {
+            flex-basis: auto;
+        }
+
+        .basis-0 {
+            flex-basis: 0;
+        }
+    </style>
+</head>
+<body>
+    <h1>Flex basis</h1>
+
+    <h3>Basis Auto</h3>
+    <p>preenche sozinho</p>
+    <section class="container">
+        <div class="item basis-auto flex-g-1">Aaaaaa</div>
+        <div class="item basis-auto flex-g-2">B</div>
+        <div class="item basis-auto flex-g-1">C</div>
+        <div class="item basis-auto flex-g-1">D</div>
+    </section>
+
+    <h3>Basis-0</h3>
+    <p>Nesse caso aqui é perceptível que mesmo escrevendo as coisas, o tamanho base do item A, ele não aumenta se tu comparar com o basis em auto. Ele só passa à aumentar quando ele ultrapassa o limite do item</p>
+    <section class="container">
+        <div class="item basis-0 flex-g-1">Aaaaaa</div>
+        <div class="item basis-0 flex-g-1">B</div>
+        <div class="item basis-0 flex-g-1">C</div>
+        <div class="item basis-0 flex-g-1">D</div>
+    </section>
+
+    <h3>Basis + width(tam. fixo do item)</h3>
+    <p>Sem grow fixo em 80px o basis</p>
+    <section class="container">
+        <div class="item w80 ">S/grow</div>
+        <div class="item w80">B</div>
+        <div class="item w80">C</div>
+        <div class="item w80">D</div>
+    </section>
+</body>
+</html>

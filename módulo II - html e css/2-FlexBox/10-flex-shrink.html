@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Flex Shrink</title>
+
+    <style>
+        .container {
+            display: flex;
+            border: 1px solid black;
+            max-width: 350px;
+        }
+
+        .item {
+            background-color: orangered;
+            margin: 5px;
+            font-size: 24px;
+            text-align: center;
+        }
+
+        .shrink-0 {
+            flex-shrink: 0;
+        }
+
+        .basis100 {
+            flex-basis: 100px;
+        }
+
+        .shrink-1{
+            flex-shrink: 1;
+        }
+
+        .grow-1 {
+            flex-grow: 1;
+        }
+    </style>
+</head>
+<body>
+    <h1>Flex Shrink</h1>
+    <h3>Shrink 1 + grow 1</h3>
+    <p>Quando eu coloco mais itens ele reduz para caber</p>
+    <section class="container">
+        <div class="item shrink-1 grow-1">A</div>
+        <div class="item shrink-1 grow-1">B</div>
+        <div class="item shrink-1 grow-1">C</div>
+        <div class="item shrink-1 grow-1">D</div>
+        <div class="item shrink-1 grow-1">E</div>
+        <div class="item shrink-1 grow-1">A</div>
+        <div class="item shrink-1 grow-1">B</div>
+        <div class="item shrink-1 grow-1">C</div>
+        <div class="item shrink-1 grow-1">D</div>
+        <div class="item shrink-1 grow-1">E</div>
+    </section>
+    <br>
+    <section class="container">
+        <div class="item shrink-1 grow-1">A</div>
+        <div class="item shrink-1 grow-1">B</div>
+        <div class="item shrink-1 grow-1">Lorem lore</div>
+        <div class="item shrink-1 grow-1">D</div>
+        <div class="item shrink-1 grow-1">E</div>
+    </section>
+
+    <h3>Shrink 0 + flex basis=100px</h3>
+    <p>Com o shrink em 0, faz com que os itens não tenha a redução, <br> resultando no vazamento dos itens para fora do container</p>
+    <section class="container">
+        <div class="item shrink-0 grow-1 basis100">A</div>
+        <div class="item shrink-0 grow-1 basis100">B</div>
+        <div class="item shrink-0 grow-1 basis100">Lorem lore</div>
+        <div class="item shrink-0 grow-1 basis100">D Lorem lore</div>
+    </section>
+
+    <h3>Shrink 1 + flex basis=100px</h3>
+    <p>Nesse caso, o shrink tentou reduzir o máximo possível,<br>
+    porém não foi o suficiente.</p>
+    <section class="container">
+        <div class="item shrink-1 grow-1 basis100">A</div>
+        <div class="item shrink-1 grow-1 basis100">B</div>
+        <div class="item shrink-1 grow-1 basis100">Lorem lore</div>
+        <div class="item shrink-1 grow-1 basis100">D Lorem lore</div>
+        <div class="item shrink-1 grow-1 basis100">A</div>
+        <div class="item shrink-1 grow-1 basis100">B</div>
+        <div class="item shrink-1 grow-1 basis100">Lorem lore</div>
+        <div class="item shrink-1 grow-1 basis100">D Lorem lore</div>
+    </section>
+
+    
+</body>
+</html>
