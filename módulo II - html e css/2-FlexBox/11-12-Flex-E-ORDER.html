@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Propriedade Flex</title>
+    <style>
+        .container {
+            max-width: 400px;
+            border: 1px solid black;
+            display: flex;
+            margin-bottom: 10px;
+        }
+
+        .item {
+            background-color: orangered;
+            margin: 5px;
+            font-size: 24px;
+            text-align: center;
+        }
+
+        .flex-1 {
+            flex: 1;
+            /* grow = 1, shrink = 1, basis = 0 */
+        }
+
+        .largura {
+            width: 200px;
+            /*min-width: 200px;*/
+        }
+
+        .flex-2 {
+            flex: 2;
+            /* grow = 2, shrink = 1, basis = 0 */
+        }
+
+        .order1{
+            order: 1;
+            color: cadetblue;
+        }
+        .order2{
+            order: 2;
+            color: chartreuse;
+        }
+
+        .order3{
+            order: 3;
+            color: bisque;
+        }
+
+        .column {
+            flex-direction: column;
+        }
+
+    </style>
+</head>
+<body>
+    <h1>Flex</h1>
+    <h3>flex: 1</h3>
+    <section class="container">
+        <div class="item flex-1">A</div>
+        <div class="item flex-1">B</div>
+        <div class="item flex-1">C</div>
+        <div class="item flex-1">D</div>
+        <div class="item flex-1">E</div>
+    </section>
+
+    <h3>flex mix</h3>
+
+    <section class="container">
+        <div class="item flex-1">A</div>
+        <div class="item flex-2">B</div>
+        <div class="item flex-1">C</div>
+        <div class="item flex-2">D</div>
+        <div class="item flex-2">E</div>
+    </section>
+
+    <p>width é ignorado quando o basis é zero</p>
+
+    
+    <section class="container">
+        <div class="item flex-2 largura">A</div>
+        <div class="item flex-1 largura">B</div>
+        <div class="item flex-1 largura">C</div>
+        <div class="item flex-2 largura">D</div>
+        <div class="item flex-1 largura">E</div>
+    </section>
+    <hr>
+    <br>
+    <br>
+    <br>
+
+    <h3>order: mix</h3>
+    <p>menor => primeiro / maior => ultimo</p>
+    <section class="container">
+        <div class="item flex-1 order2">A</div>
+        <div class="item flex-1 order2">B</div>
+        <div class="item flex-1 order3">C</div>
+        <div class="item flex-1 order2">D</div>
+        <div class="item flex-1 order1">E</div>
+    </section>
+
+    <h3>order: mix</h3>
+    <p>modo column</p>
+    <section class="container column">
+        <div class="item flex-1 order2">A</div>
+        <div class="item flex-1 order2">B</div>
+        <div class="item flex-1 order3">C</div>
+        <div class="item flex-1 order2">D</div>
+        <div class="item flex-1 order1">E</div>
+    </section>
+
+</body>
+</html>
