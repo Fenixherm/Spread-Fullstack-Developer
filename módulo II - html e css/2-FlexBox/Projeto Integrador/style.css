@@ -54,6 +54,7 @@ header .list-items {
 	max-width: 992px;
 	margin: 0 auto;
 	width: 100%;
+	min-width: 320px;
 }
 
 .apresentacao {
@@ -112,7 +113,8 @@ header .list-items {
 }
 
 #quem-somos img {
-	min-width: 420px;
+	min-width: 320px;
+	margin: auto;
 }
 
 .container-externo {
@@ -172,11 +174,17 @@ header .list-items {
 #planos {
 	flex-direction: column;
 	min-height: 100vh;
+	padding-top: 50px;
+}
+
+#planos h2 {
+	font-size: 32px;
 }
 
 .list-planos {
 	display: flex;
 	align-items: flex-end;
+	justify-content: space-between;
 }
 
 .item-plano {
@@ -184,12 +192,14 @@ header .list-items {
 	border: 5px solid #122A57;
 	margin-right: 20px;
 	padding: 10px;
+	max-width: 240px;
 }
 
 .item-plano h3 {
 	font-size: 24px;
 	display: flex;
 	flex-direction: column;
+	margin-top: 30px;
 }
 
 .item-plano h3::after{
@@ -210,4 +220,31 @@ header .list-items {
 	padding: 10px 20px;
 	display: flex;
 	flex-direction: column;
+	margin-bottom: 10px;
+}
+
+.item-plano ul li {
+	display: flex;
+	flex-wrap: nowrap;
+	align-items: center;
+}
+
+.item-plano ul li::before {
+	content: "";
+	width: 10px;
+	height: 10px;
+	background-color: #122A57;
+	margin-right: 5px;
+}
+
+footer {
+	background-color: #122A57;
+	height: 70px;
+	display:flex;
+	align-items: center;
+}
+
+footer .footer {
+	justify-content: space-between;
+	color: #fff;
 }
