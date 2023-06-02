@@ -25,10 +25,8 @@ header a {
 	color: #fff;
 }
 
-.flex-container {
-	display: flex;
-	max-width: 992px;
-	margin: 0 auto;
+div img {
+	display: block;
 	width: 100%;
 }
 
@@ -45,10 +43,17 @@ nav {
 header .list-items {
 	display: flex;
 	align-items: center;
-	gap: 15px;
 	/* parte da aula*/
 	width: 100%;
 	max-width: 260px;
+	justify-content: space-between;
+}
+
+.flex-container {
+	display: flex;
+	max-width: 992px;
+	margin: 0 auto;
+	width: 100%;
 }
 
 .apresentacao {
@@ -67,7 +72,7 @@ header .list-items {
 	margin-bottom: 10px;
 }
 
-.texto-apresentacao a {
+.btn {
 	background-color: #122A57;
 	color: #fff;
 	text-align: center;
@@ -76,5 +81,133 @@ header .list-items {
 	display:block;
 	height: 50px;
 	line-height: 50px;
+	margin: 10px 0;
+}
+
+#quem-somos {
+	flex-direction: row-reverse;
+	align-items: center;
+	justify-content: space-between;
+}
+
+#quem-somos h2 {
+	font-size: 32px;
+	color: #122A57;
+	display: flex;
+	margin-bottom: 20px;
+}
+
+#quem-somos h2::before {
+	content: "";
+	height: 50px;
+	width: 5px;
+	margin-right: 5px;
+	background-color: #122A57;
+	position: relative;
+}
+
+#quem-somos p {
 	margin-bottom: 10px;
+	width: 90%;
+}
+
+#quem-somos img {
+	min-width: 420px;
+}
+
+.container-externo {
+	background-color: #122A57;
+	width: 100%;
+}
+
+#servicos {
+	flex-direction: column;
+	padding: 50px 0 100px 0;
+}
+
+#servicos h2 {
+	font-size: 32px;
+	color: #fff;
+	margin: 20px;
+}
+
+.list-servicos {
+	display: flex;
+	justify-content: space-between;
+}
+
+.list-servicos .item-servico {
+	text-align: center;
+}
+
+.item-servico a {
+	width: 220px;
+	background-color: #fff;
+	border-radius: 30px;
+	height: 50px;
+	margin-top: 20px;
+	line-height: 50px;
+	padding: 5px 10px;
+	font-size: 12px;
+	font-weight: 700;
+	transition: 0.3s ease-in-out;
+}
+
+.item-servico a:hover {
+	background-color: antiquewhite;
+}
+
+.item-servico p {
+	font-weight: 700;
+	font-size: 18px;
+	color: #fff;
+	margin-top: 20px;
+}
+
+.item-servico img {
+	width: 80%;
+	margin: auto;
+}
+
+#planos {
+	flex-direction: column;
+	min-height: 100vh;
+}
+
+.list-planos {
+	display: flex;
+	align-items: flex-end;
+}
+
+.item-plano {
+	flex: 1;
+	border: 5px solid #122A57;
+	margin-right: 20px;
+	padding: 10px;
+}
+
+.item-plano h3 {
+	font-size: 24px;
+	display: flex;
+	flex-direction: column;
+}
+
+.item-plano h3::after{
+	content: "";
+	background-color: #122A57;
+	width: 100%;
+	height: 3px;
+	margin-top: 20px;
+	margin-bottom: 10px;
+}
+
+.item-plano .btn {
+	margin: auto;
+	margin-bottom: 20px;
+}
+
+.item-plano ul {
+	padding: 10px 20px;
+	display: flex;
+	flex-direction: column;
 }
