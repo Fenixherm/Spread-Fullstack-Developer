@@ -1,0 +1,56 @@
+body {
+    color: aquamarine;
+    background-color: rgba(0, 0, 0, 0.856);
+}
+
+#currentNumber {
+    color: white;
+}
+
+.section-container {
+    margin: 50px;
+    border: 1px solid white;
+    padding-bottom: 50px;
+}
+
+.header{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.counter {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 15px;
+}
+
+.counter span {
+    font-size: 24px;
+}
+
+.counter button {
+    font-size: 24px;
+    border-radius: 15%;
+    padding: 12px;
+    border: none;
+}
+
+.counter span {
+    padding: 10px 15px;
+}
+
+.counter button:first-child{
+    padding: 12px 14px;
+}
+
+.counter button:active{
+    background-color: coral;
+}
+
+.todo-container {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+}
