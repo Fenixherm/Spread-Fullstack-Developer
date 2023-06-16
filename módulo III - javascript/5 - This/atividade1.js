@@ -1,7 +1,29 @@
 function mediaSala(arr, media) {
+    let aprovados = []
+    
+    for(let i = 0; i < arr.length; i++){
+        const {nota, nome} = arr[i]; //basicamente divide o array em {nome, nota} daquele índice
+        if(nota >= media)
+        {
+            aprovados.push(nome)
+        }
+    }
 
-    let arrayAuxiliar = []
+    return aprovados
+}
 
+/* é igual a */
+function mediaSala2(arr, media) {
+    let aprovados = []
+    
+    for(let i = 0; i < arr.length; i++){
+        if(arr[i].nota >= media)
+        {
+            aprovados.push(arr[i].nome)
+        }
+    }
+
+    return aprovados
 }
 
 const alunos = 
@@ -29,7 +51,8 @@ const alunos =
         nota: 4,
         turma: "2B",
     },
-]
+];
 
 
-mediaSala(alunos)
+console.log(mediaSala(alunos, 5))
+console.log(mediaSala2(alunos, 7))
