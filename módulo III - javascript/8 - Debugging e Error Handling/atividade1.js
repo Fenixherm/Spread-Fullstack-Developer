@@ -1,24 +1,43 @@
-/* Minha resolução */
+/*
 function somaTudo(arr, num){
     if(!arr || !num) throw new ReferenceError("Valor de parâmetro inválido");
-    //if(num !== 'object') throw new TypeError("Isso não é um objeto");
-    if(num !== 'number') throw new TypeError("Isso não é um número")
+    if(typeof num !== 'object') throw new TypeError("Isso não é um objeto");
+    if(typeof num !== 'number') throw new TypeError("Isso não é um número");
     if(arr.length !== num) throw new RangeError ("Tamanho de vetor incorreto");
     
     return arr;
 }
+*/
 
-function meuErro(arr, num){
+const vetor = [1, 2, 3, 4];
+const number = 4;
+
+//somaTudo(vetor, number);
+
+
+function meuErro2(arr, num){
     try{
-        return somaTudo(arr, num);
+        if(!arr && !num) throw new ReferenceError("Valor de parâmetro inválido");
+        if(typeof arr !== 'object') throw new TypeError("Isso não é um objeto");
+        if(typeof num !== 'number') throw new TypeError("Isso não é um número");
+        if(arr.length !== num) throw new RangeError ("Tamanho de vetor incorreto");
 
+        return arr;
     }
     catch(e){
-        console.log(e);
+        if(e instanceof ReferenceError) {
+            console.log("ReferenceError:");
+            console.log(e.message);
+        }else if(e instanceof TypeError){
+            console.log("TypeError:");
+            console.log(e.message);
+        }else if(e instanceof RangeError){
+            console.log("RangeError:");
+            console.log(e.message);
+        }else{
+            console.log("Erro não esperado: " + e);
+        }
     }
 }
 
-const vetor = [1, 2, 3, 4];
-const number = "teste";
-
-meuErro(vetor, number);
+console.log(meuErro2(vetor, number));
