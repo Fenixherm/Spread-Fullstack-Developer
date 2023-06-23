@@ -1,0 +1,41 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: antiquewhite;
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.dark-mode {
+    background-color: black;
+}
+
+.titulo-branco {
+    color: white;
+}
+
+.btn-style {
+    margin-top: 10px;
+    padding: 10px;
+    background-color: #3a3a3a;
+    border: 0;
+    border-radius: 50px;
+    color: bisque;
+}
+
+.btn-style:hover{
+    background-color: chocolate;
+    cursor: pointer;
+}
+
+.btn-style:active{
+    background-color: #3a3a3a;
+}
