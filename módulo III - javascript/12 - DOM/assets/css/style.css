@@ -6,7 +6,7 @@
 
 body {
     width: 100%;
-    height: 100%;
+    height: 100vh;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -14,41 +14,57 @@ body {
     background-color: antiquewhite;
 }
 
-.corpo {
-    transition: 0.3s;
+.flex-wrapper {
+    transition: 0.3s ease-in-out;
+    flex: 1;
+    margin-top: 40vh;
+    text-align: center;
 }
 
-.dark-mode {
+body.dark-mode {
     background-color: black;
 }
 
-.titulo-branco {
+#titulo.dark-mode {
     color: white;
 }
 
-.btn-style {
+#btn {
     margin-top: 10px;
     padding: 10px;
     background-color: #3a3a3a;
     border: 0;
     border-radius: 50px;
     color: bisque;
+    transition: 0.4s ease-in-out;
 }
 
-.btn-style:hover{
+#btn.dark-mode{
+    background-color: white;
+    color: black;
+}
+
+#btn:hover{
     background-color: chocolate;
     cursor: pointer;
 }
 
-.btn-style:active{
+#btn:active{
     background-color: #3a3a3a;
 }
 
 footer {
+    width: 100%;
     display: flex;
     justify-content: center;
     align-items: center;
     padding: 2px;
     font-weight: bold;
-    background-color: #3a3a3a;
+    background-color: rgb(66, 66, 66);
+    color: white;
+}
+
+#text-footer.dark-mode {
+    background-color: bisque;
+    color: #000;
 }

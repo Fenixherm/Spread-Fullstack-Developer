@@ -1,0 +1,32 @@
+solução professora
+
+const body = document.getElementsByTagName("body")[0];
+const botao = document.getElementById("btn");
+const titulo = document.getElementById("titulo");
+const footer = document.getElementById("text-footer");
+const darkMode = 'darkmode';
+
+botao.addEventListener("click", changeMode);
+
+function changeMode(){
+    changeClasses();
+    changeText();
+}
+
+function changeClasses(){
+    body.classList.toggle("dark-mode");
+    botao.classList.toggle("dark-mode");
+    titulo.classList.toggle("dark-mode");
+    footer.classList.toggle("dark-mode");
+}
+
+function changeText(){
+    if(body.classList.contains('dark-mode')){
+        titulo.innerHTML = "Light Mode: OFF";
+        botao.innerHTML = "Light Mode";
+        return;
+    }
+
+    titulo.innerHTML = "Light Mode: ON";
+    botao.innerHTML = "Dark Mode";
+}
