@@ -4,14 +4,15 @@
     box-sizing: border-box;
 }
 
-body {
+.corpo {
     background-color: antiquewhite;
-    width: 100vw;
-    height: 100vh;
     display: flex;
     align-items: center;
     justify-content: center;
     flex-direction: column;
+    width: 100%;
+    height: 97vh;
+    transition: 0.3s;
 }
 
 .dark-mode {
@@ -37,5 +38,14 @@ body {
 }
 
 .btn-style:active{
+    background-color: #3a3a3a;
+}
+
+footer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 2px;
+    font-weight: bold;
     background-color: #3a3a3a;
 }
